@@ -1,0 +1,54 @@
+Linking Quake Player Efficiency to Aim Accuracy
+========================================================
+
+author: staszz2
+
+date: Nov. 25, 2016
+
+1. General Description
+========================================================
+Background - Quake is an online game where players battle eatchother with various weapons. Stats are extracted through QuakeLive API JSON and stored for simplicity in post-processed CSV file.
+
+This application is meant to explore the following things:
+
+- Relationship between efficiency and weapon aim
+- General regression pattern and role of weapons
+- How far does an aim take a person and aim-alone stops working
+
+2. Basic data
+========================================================
+
+```{r, echo=FALSE}
+dataSet <- read.csv("players.csv")
+```
+Head of used players data looks like this:
+<font size="4">
+```{r}
+head(dataSet, 10)
+```
+</font> 
+
+3. Usage
+========================================================
+1. Select weapons you want to explore
+2. Slide the eficiency slider to see how aim values change
+3. Find points where aim no-longer follows general regression
+
+!["Control panel"](control-panel.png)
+
+4. Results
+========================================================
+1. At lower efficiencies all you need is to improve your aim
+2. At about 1.4 KDR (efficiency) aim is no longer main contributing factor
+3. Explore different weapons
+
+!["Railgun progression"](results1.png)
+
+5. Application and links
+========================================================
+* Shiny app - https://staszz2.shinyapps.io/QuakePlayers/
+* My github - https://github.com/staszz2
+* Quake live in action - https://www.youtube.com/watch?v=sfwG1zgc0_Q
+
+Thank you!
+
